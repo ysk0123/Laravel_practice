@@ -19,7 +19,7 @@
       <nav>
         <ul class="header-nav">
           <li><a href="http://localhost" class="nav_link">home</a></li>
-          <li><a href="http://localhost/about" class="nav_link">about</a></li>
+          <li><a href="{{ route('about')}}" class="nav_link">about</a></li>
         </ul>
       </nav>
     </div>
