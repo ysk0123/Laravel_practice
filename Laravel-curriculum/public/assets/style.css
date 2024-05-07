@@ -12,6 +12,7 @@
 /* デフォルトのpaddingを削除 */
 ul,
 ol {
+  list-style: none;
   padding: 0;
 }
 
@@ -128,7 +129,7 @@ body {
   .main {
     padding: 30px;
   }
-
+  .p-list_title,
   .name-wrap {
     margin-top: 30px;
   }
@@ -141,6 +142,13 @@ body {
     margin-top: 10px;
   }
 
+  .p-company_list,
+  .p-user_list {
+    font-weight:550;
+    margin-top: 12px;
+    margin-left:24px;
+
+  }
   .footer {
     width: 100%;
     text-align: center;
