@@ -11,11 +11,8 @@ class TopController extends Controller
     public function top()
     {
         $companies = Company::all();
-        return view('front.page.top',['companies' => $companies]);
+        return view('front.page.top',
+        ['companies' => $companies]);
     }
-    // public function about()
-    // {
-    //     $users = User::with('company')->get();
-    //     return view('about', ['users' => $users]);
-    // }
+
 }

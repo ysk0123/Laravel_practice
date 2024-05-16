@@ -14,6 +14,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-            User::factory()->count(10)->create(); // 10人のユーザーを生成
+            $this->call([
+                CompaniesTableSeeder::class,
+                UsersTableSeeder::class,
+    ]);
+
     }
 }

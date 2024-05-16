@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Company extends Model
 {
-    public function users()
+    public function users()//Userモデルとのリレーションシップを定義しています
     {
         return $this->hasMany(User::class, 'company_id');
     }
-    use HasFactory;
+    use HasFactory;//カンパニーメソッドを使ってモデルをインスタンスするためのトレイト
 }
