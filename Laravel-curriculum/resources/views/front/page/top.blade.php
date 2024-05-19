@@ -3,9 +3,12 @@
 @section('description', 'トップページのdescriptionです')
 @section('content')
   <h1 class="page-name">トップページです。</h1>
-  <h2 class="p-list_title">一覧ページ</h2>
+  <h2 class="p-list_title">企業一覧</h2>
   <ul class="p-company_wrap">
-    <li><a href="{{ route('books.index') }}">ユーザー</a></li>
-    <li><a href="{{ route('books.index') }}">書籍</a></li>
+    @foreach ($companies as $company)
+    <div class="p-company_list">
+      <li>{{ $company->company_name }}</li>
+    </div>
+      @endforeach
   </ul>    
 @endsection
