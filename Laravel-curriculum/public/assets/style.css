@@ -14,6 +14,7 @@ ul,
 ol {
   list-style: none;
   padding: 0;
+  margin:0;
 }
 
 /* Remove default margin */
@@ -117,6 +118,10 @@ body {
   .logo {
     width: 50px;
   }
+.c-subtitle {
+  margin-top: 40px;
+}
+
 
   .header-nav {
     display: flex;
@@ -129,7 +134,7 @@ body {
   .main {
     padding: 30px;
   }
-  .p-list_title,
+  .p-list__title,
   .name-wrap {
     margin-top: 30px;
   }
@@ -137,17 +142,25 @@ body {
   .name-list {
     padding-left: 20px;
   }
-
+  
   .name-list > li:not(:first-child) {
     margin-top: 10px;
   }
-
-  .p-company_list,
-  .p-user_list {
-    font-weight:550;
-    margin-top: 12px;
+  .p-list__content,
+  .p-book__list,
+  .p-user__list,
+  .p-company__list,
+  .p-usersInfo__wrapper {
+    margin-top: 16px;
     margin-left:24px;
-
+  }
+  .p-user__listItem,
+  .p-book__listItem {
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+  .p-listItem{
+    margin-top:12px;
   }
   .footer {
     width: 100%;
@@ -155,7 +168,6 @@ body {
     background-color: #d1a9cd;
     padding: 50px 0;
   }
-
   .footer-txt {
     color: #fff;
   }
