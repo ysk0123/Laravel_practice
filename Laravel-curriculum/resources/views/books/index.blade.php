@@ -7,7 +7,10 @@
     <h2>著書一覧</h2>
     <ul>
 @foreach($books as $book)
-    <li>{{ $book->title }}</li>
+    <li>
+        <a href="{{ route('books.show',$book->id) }}">{{ $book->title }}</a></li>
+    <li>著書 : {{$book->author_id }}</li>
+    <li>コメント : {{ $book->comment }}</li>
 @endforeach
     </ul>
 @endsection
