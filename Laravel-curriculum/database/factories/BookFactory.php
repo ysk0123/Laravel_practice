@@ -20,12 +20,23 @@ class BookFactory extends Factory
     
      public function definition(): array
     {
-        return [
-            'title' => $this ->faker->sentence,
+        $comments = [
+            'テストコメント1',
+            'テストコメント2',
+            'テストコメント3',
+            'テストコメント4',
+            'テストコメント5'
+        ];
 
-            'author_id' => User::factory(),
-            'comment' => $this->faker->sentence(10),
-            
+         // 1から5までのランダムな数のコメントを選択
+         $randomCount = $this->faker->numberBetween(1, 5);
+         $randomComments = $this->faker->randomElements($comments, $randomCount);
+
+         $concatenatedComments = implode('', $randomComments);
+        return [
+            'title' => 'サンプルブック' . $this->faker->unique()->numberBetween(0,20),
+            'author_id' => User::factory()->create()->id,
+            'comment' => $concatenatedComments,   
         ];
     }
 }

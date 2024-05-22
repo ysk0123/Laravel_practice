@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Book;
+use App\Models\User;
 
 class BooksTableSeeder extends Seeder
 {
@@ -13,6 +14,17 @@ class BooksTableSeeder extends Seeder
      */
     public function run(): void
     {
-        Book::factory()->count(10)->create();
+        
+        $users = User::factory(10)->create();
+
+        foreach ($users as $user) {
+
+        Book::factory(random_int(0,3))->create([
+                'author_id' => $user->id,
+            ]);
+            
+        }
+
+        Book::factory(10 - Book::count())->create();
     }
 }
