@@ -22,7 +22,7 @@
   <ul>
     @foreach($user->books as $book)
     <li class="p-user__listItem">
-      <a href="{{ route('books.show', ['book' => $book->id]) }}">{{ $book->title }}</a>
+      <a href="{{ route('books.edit', ['book' => $book->id]) }}">{{ $book->title }}</a>
       <p>コメント: {{ $book->comment }}</p>
     </li>
     @endforeach

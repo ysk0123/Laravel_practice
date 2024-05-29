@@ -2,13 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TopController;
-use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\UserController;
 
-Route::resource('users',UserController::class);
 Route::get('/', [TopController::class, 'top'])->name('top');
-Route::get('/about', [AboutController::class, 'about'])->name('about');
-Route::get('/books',[BookController::class, 'index'])->name('books.index');
-Route::get('/books/{book}',[BookController::class, 'show'])->name('books.show');
-Route::delete('/books/{book}', [BookController::class, 'destroy'])->name('books.destroy');
+
+Route::resource('books',BookController::class);
+Route::resource('users',UserController::class)->only(['index', 'show', 'destroy']);
+// Route::post('/books', [BookController::class, 'store'])->name('books.store');
+Route::put('/books/{book}', [BookController::class,'update'])->name('books.update');

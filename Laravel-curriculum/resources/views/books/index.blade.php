@@ -3,6 +3,7 @@
 @section('description', 'ユーザー一覧のdescriptionです')
 @section('content')
 <h1>著書一覧ページです。</h1>
+<a href="{{ route('books.create') }}">新規登録</a>
 <h2 class="c-subtitle">著書一覧</h2>
 <div class="p-book__list">
   <ul>

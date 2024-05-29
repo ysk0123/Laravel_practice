@@ -14,7 +14,7 @@ ul,
 ol {
   list-style: none;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
 /* Remove default margin */
@@ -66,7 +66,7 @@ img {
 
 /* Natural flow and rhythm in articles by default */
 /* article要素内の要素に自然な流れとリズムを定義 */
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -106,7 +106,7 @@ body {
 
 @media screen and (min-width: 796px) {
   .header {
-    width:  100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,22 +118,24 @@ body {
   .logo {
     width: 50px;
   }
-.c-subtitle {
-  margin-top: 40px;
-}
+
+  .c-subtitle {
+    margin-top: 20px;
+  }
 
 
   .header-nav {
     display: flex;
   }
 
-  .header-nav > li:not(:first-child) {
+  .header-nav>li:not(:first-child) {
     margin-left: 30px;
   }
 
   .main {
     padding: 30px;
   }
+
   .p-list__title,
   .name-wrap {
     margin-top: 30px;
@@ -142,32 +144,56 @@ body {
   .name-list {
     padding-left: 20px;
   }
-  
-  .name-list > li:not(:first-child) {
+
+  .name-list>li:not(:first-child) {
     margin-top: 10px;
   }
+
   .p-list__content,
   .p-book__list,
   .p-user__list,
   .p-company__list,
   .p-usersInfo__wrapper {
     margin-top: 16px;
-    margin-left:24px;
+    margin-left: 24px;
   }
+
   .p-user__listItem,
   .p-book__listItem {
     margin-top: 12px;
     margin-left: 12px;
   }
-  .p-listItem{
-    margin-top:12px;
+
+  .p-listItem {
+    margin-top: 12px;
   }
+
+  .p-book__form__wrapper {
+    height: 400px;
+
+  }
+
+  .p-book__form {
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+  }
+
+  .p-book__form__element {
+    width: 80px;
+  }
+
+  .p-book__submit {
+    margin-top: 32px;
+  }
+
   .footer {
     width: 100%;
     text-align: center;
     background-color: #d1a9cd;
     padding: 50px 0;
   }
+
   .footer-txt {
     color: #fff;
   }
@@ -176,10 +202,9 @@ body {
 a {
   color: #4e65ba;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 795px) {
-  
-}
+@media screen and (max-width: 795px) {}
